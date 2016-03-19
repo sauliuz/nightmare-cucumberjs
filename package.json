@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-cucumber": "^0.3.0",
     "nightmare": "^2.2.0"
   },
