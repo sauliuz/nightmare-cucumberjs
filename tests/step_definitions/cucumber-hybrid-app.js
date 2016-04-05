@@ -31,11 +31,11 @@ module.exports = function() {
 	});
 
 	this.AfterFeatures(function(scenario, callback){
-		//nightmare
-		//.end()
-		//.then(function () {
-    		//  console.log('nightmare is now closed..');
-    	        //})
+		nightmare
+			.end()
+			.then(function () {
+    			console.log('nightmare is now closed..');
+    		})
 	});
 
 //////////////////////////////////////
