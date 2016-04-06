@@ -12,4 +12,4 @@ Feature:
 
 	Scenario: wikipedia.org site should be up and running
 		Given I visit www.wikipedia.org website
-		Then website title should be "ikipedia"
+		Then website title should be "Wikipedia"
