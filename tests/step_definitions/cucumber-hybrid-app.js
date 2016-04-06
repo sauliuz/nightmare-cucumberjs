@@ -2,6 +2,8 @@
 
 var misbehave = require('./misbehave.js');
 var Nightmare = require('nightmare');
+var jsonfile = require('jsonfile');
+var fs = require('fs');
 
 // will hold nightmare instance
 var nightmare = {};
@@ -17,7 +19,17 @@ module.exports = function() {
 		nightmare = Nightmare({ 
 			show: false
 		});
-		callback();
+
+		// remove failed.json if exists
+        fs.exists('failed.json', function(exists) {
+                if(exists) {
+                        console.log('cleaning temp files');
+                        fs.unlink('failed.json');
+                }
+        });
+
+        // good to move forward
+        callback();
 	});
 
 	this.Before(function(scenario, callback) {
@@ -27,7 +39,18 @@ module.exports = function() {
 	});
 
 	this.After(function(scenario, callback) {
-		callback();
+		// capture failed scenarios in file
+        if(scenario.isFailed()){
+                var file = 'failed.json';
+                var entry = {scenario: 'failed'};
+
+                jsonfile.writeFile(file, entry, function (err) {
+                        console.log('recording failed scenario');
+                });
+        }
+        
+        // good to move forward
+        callback();
 	});
 
 	this.AfterFeatures(function(scenario, callback){
