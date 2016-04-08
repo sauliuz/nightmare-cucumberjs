@@ -11,6 +11,6 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-cucumber');
+	grunt.loadNpmTasks('grunt-cucumberjs');
 	grunt.registerTask('test', ['cucumberjs']);
 };
