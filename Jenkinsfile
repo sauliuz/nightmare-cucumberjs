@@ -15,9 +15,9 @@ node {
    // Mark the code build 'stage'....
    stage 'Install dependencies'
    // Install Gruntjs
-   sh 'npm install -g grunt-cli'
+   sh 'sudo npm install -g grunt-cli'
    // Install npm dependencies
-   sh 'npm install'
+   sh 'sudo npm install'
 
    // Mark the code 'last stage'....
    stage 'Last Stage'
