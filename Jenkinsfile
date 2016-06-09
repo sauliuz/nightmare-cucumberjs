@@ -13,11 +13,13 @@ node {
    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/popularowl/nightmare-cucumberjs.git']]])
 
    // Mark the code build 'stage'....
-   stage 'Build'
-   // Run the maven build
-   echo 'running build..'
+   stage 'Install dependencies'
+   // Install Gruntjs
+   sh 'npm install -g grunt-cli'
+   // Install npm dependencies
+   sh 'npm install'
 
-   // Mark the code build 'stage'....
+   // Mark the code 'last stage'....
    stage 'Last Stage'
    echo 'last stage..'
    sh './validate-test-run.sh'	
