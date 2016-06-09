@@ -17,6 +17,10 @@ node {
    // Install npm dependencies
    sh 'npm install'
 
+   // Testing
+   stage 'Testing Stage'
+   sh 'grunt test'
+
    // Mark the code 'last stage'....
    stage 'Last Stage'
    echo 'last stage..'
