@@ -17,9 +17,10 @@ node {
    // Install npm dependencies
    sh 'npm install'
 
-   // Testing
+   // Testing stage
    stage 'Testing Stage'
-   sh 'grunt test'
+   // running virtual xvfb for Electron tests
+   sh 'DEBUG=nightmare xvfb-run --server-args="-screen 0 1024x768x24" grunt test'
 
    // Mark the code 'last stage'....
    stage 'Last Stage'
