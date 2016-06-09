@@ -20,7 +20,7 @@ node {
    // Testing stage
    stage 'Testing Stage'
    // running virtual xvfb for Electron tests
-   sh 'DEBUG=nightmare xvfb-run --server-args="-screen 0 1024x768x24" grunt test'
+   sh 'xvfb-run --server-args="-screen 0 1024x768x24" grunt test'
 
    // Mark the code 'last stage'....
    stage 'Last Stage'
