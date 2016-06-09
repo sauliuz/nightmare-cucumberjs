@@ -20,6 +20,6 @@ node {
    // Mark the code build 'stage'....
    stage 'Last Stage'
    echo 'last stage..'
-   sh validate-test-run.sh	
+   sh 'validate-test-run.sh'	
 
 }
