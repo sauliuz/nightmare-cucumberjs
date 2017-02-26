@@ -5,7 +5,9 @@
 ### Overview
 
 This project is an example of BDD (behaviour driven development) setup with [nightmare](https://github.com/segmentio/nightmare) and [cucumberjs](https://github.com/cucumber/cucumber-js) frameworks.
+
 You can use example setup in this project for creating BDD tests for your web project.
+
 You can also setup continuous application monitoring for your web apps with the help of automated CI jobs.
 
 
