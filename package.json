@@ -16,7 +16,11 @@
     "grunt-cli": "^0.1.13",
     "grunt-cucumberjs": "^0.9.0",
     "jsonfile": "^2.2.3",
-    "nightmare": "^2.2.0"
+    "nightmare": "^2.10.0"
+  },
+  "engineStrict": true,
+  "engines": {
+      "node": "6.4.0"
   },
   "license": "MIT"
 }
