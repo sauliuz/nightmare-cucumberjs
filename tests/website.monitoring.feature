@@ -8,7 +8,7 @@ Feature:
 
 	Scenario: github.com website should be up and running
 		Given I visit github.com website
-		Then website title should be "How people build software · GitHub"
+		Then website title should be "The world's leading software development platform · GitHub"
 
 	Scenario: wikipedia.org site should be up and running
 		Given I visit www.wikipedia.org website
