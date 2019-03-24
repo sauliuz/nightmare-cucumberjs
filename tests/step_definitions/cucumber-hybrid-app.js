@@ -66,7 +66,7 @@ module.exports = function() {
 //////////////////////////////////////
 
 	this.Given(/^I visit (.*) website$/, function(domain, callback) {
-		this.misbehave.setDomain('http',domain);		
+		this.misbehave.setDomain('https',domain);		
 		callback();		
 	});	
 
