@@ -9,10 +9,9 @@
 // setup //
 
 var build_misbehave = function() {
-	var misbehave = new Misbehave('http','localhost');
+	var misbehave = new Misbehave('https','localhost');
 	return misbehave;
 }
-
 
 function Misbehave(scheme, domain) {
 	this.domain = scheme + '://' + domain;
@@ -33,7 +32,7 @@ var getAssertionResult = function(success, expected, actual) {
 
 // Allow to set mode
 Misbehave.prototype.setDomain = function(scheme,domain) {
-	if (!scheme){ scheme = 'http';}
+	if (!scheme){ scheme = 'https';}
 	if (!domain){ domain = 'localhost';}
 	this.domain = scheme + '://' + domain;
 };

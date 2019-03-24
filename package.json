@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "example project for performing BDD testing on hybrid HTML5 based mobile applications",
   "scripts": {
-    "test": "grunt test"
+    "test": "cucumber-js tests"
   },
   "author": "https://github.com/sauliuz",
   "repository": {
@@ -11,16 +11,9 @@
     "url": "https://github.com/popularowl/nightmare-cucumberjs.git"
   },
   "dependencies": {
-    "cucumber": "^0.9.5",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-cucumberjs": "^0.9.0",
-    "jsonfile": "^2.2.3",
-    "nightmare": "^2.10.0"
-  },
-  "engineStrict": true,
-  "engines": {
-      "node": "6.4.0"
+    "cucumber": "5.1.0",
+    "nightmare": "3.0.1",
+    "jsonfile": "5.0.0"
   },
   "license": "MIT"
 }
