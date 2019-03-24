@@ -1,14 +1,14 @@
 Feature:
 	I would like to monitor several websites
-	and validate that their titles are as expected.
+	and validate that their home page titles are as expected.
 
-	Scenario: httpbin.org website should be up and running
-		Given I visit httpbin.org website
-		Then website title should be "httpbin(1): HTTP Client Testing Service"
+	Scenario: popularowl.com website should be up and running
+		Given I visit popularowl.com website
+		Then website title should be "PopularOwl - API first tutorials, examples and discussions"
 
-	Scenario: github.com website should be up and running
-		Given I visit github.com website
-		Then website title should be "The world's leading software development platform · GitHub"
+	Scenario: htmlcenter.com website should be up and running
+		Given I visit htmlcenter.com website
+		Then website title should be "HTMLCenter is about mobile and web development"
 
 	Scenario: wikipedia.org site should be up and running
 		Given I visit www.wikipedia.org website
