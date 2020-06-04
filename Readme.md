@@ -14,8 +14,8 @@ This project shows the example setup creating BDD tests for your web app monitor
 
 Clone this code repositary. Install all required nodejs packages and run tests
 
-  npm install
-  npm test
+    npm install
+    npm test
 
 The output should be passing tests.
 
